@@ -1,18 +1,6 @@
-const http = require('http');
 const fs = require('fs');
 
-const server = http.createServer((req, res) => {
-    // console.log(req);
-    // process.exit();
-    // console.log("url: ", req.url, "method: ", req.method, "headers: ", req.headers);
-
-    // res.setHeader('Content-Type', 'text/html');
-    // res.write('<html>');
-    // res.write('<head><title>My First Page</title></head>');
-    // res.write('<body><h1>Hello from my Node.js Server!</h1></body>');
-    // res.write('</html>');
-    // res.end();
-
+const requestHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
     if (url === '/') {
@@ -32,10 +20,11 @@ const server = http.createServer((req, res) => {
             const parsedBody = Buffer.concat(body).toString();
             const message = parsedBody.split('=')[1];
 
-            fs.writeFile('message.txt', message,);
-            res.statusCode = 302;
-            res.setHeader('Location', '/');
-            return res.end();
+            fs.writeFile('message.txt', message, (err) => {
+                res.statusCode = 302;
+                res.setHeader('Location', '/');
+                return res.end();
+            });
         });
     }
     res.setHeader('Content-Type', 'text/html');
@@ -44,6 +33,17 @@ const server = http.createServer((req, res) => {
     res.write('<body><h1>Hello from my Node.js Server!</h1></body>');
     res.write('</html>');
     res.end();
-});
+}
 
-server.listen(3000)
+// module.exports = {
+//     handler: requestHandler,
+//     someText: 'Some random text'
+// };
+
+
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some random text';
+
+exports.handler = requestHandler;
+exports.someText = 'Some random text';
+
