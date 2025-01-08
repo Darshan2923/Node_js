@@ -1,0 +1,7 @@
+Attached, you find the source code for this section.
+
+When using my source code, make sure to run npm install in the extracted folder!
+
+Useful resources:
+
+More on MVC: https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture
