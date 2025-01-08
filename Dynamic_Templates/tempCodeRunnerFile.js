@@ -2,24 +2,21 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-// const { engine } = require('express-handlebars'); // Updated import
+const { engine } = require('express-handlebars'); // Updated import
 
 const app = express();
 
 // Set up Handlebars engine
-// app.engine(
-//     'handlebars',
-//     engine({
-//         extname: 'handlebars',
-//         layoutsDir: 'views/layouts',
-//         defaultLayout: 'main'
-//     })
-// );
-// app.set('view engine', 'handlebars');
+app.engine(
+    'handlebars',
+    engine({
+        extname: 'handlebars',
+        layoutsDir: 'views/layouts',
+        defaultLayout: 'main'
+    })
+);
+app.set('view engine', 'handlebars');
 // app.set('view engine', 'pug');
-
-
-app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const adminData = require('./routes/admin');
