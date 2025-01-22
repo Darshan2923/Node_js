@@ -39,7 +39,7 @@ This repository provides a comprehensive guide to Node.js development, focusing 
 - Developing RESTful APIs
 - Using GraphQL for data queries
 - Applying modular design principles
-- Integrating Deno runtime for JavaScript and TypeScript
+- Integrating Deno runtime for JavaScript
 
 ---
 
