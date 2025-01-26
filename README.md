@@ -1,7 +1,7 @@
 # Complete Node.js Guide with MVC Architecture, REST APIs, and GraphQL
 
 ## Overview
-This repository provides a comprehensive guide to Node.js development, focusing on modern techniques and best practices to build scalable and maintainable web applications.
+This repository provides a comprehensive guide to Node.js development, focusing on modern techniques and best practices to build scalable and maintainable web & mobile applications.
 
 ## Key Features
 - **MVC Architecture**: Implement a clean and organized project structure.
