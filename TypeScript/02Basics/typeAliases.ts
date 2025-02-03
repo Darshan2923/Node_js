@@ -1,0 +1,17 @@
+// Type Aliases
+
+type User = {
+    name: string;
+    email: string;
+    isActive: boolean;
+}
+
+type Mystring = string;
+
+function createUser(user: User): User {
+    return user;
+}
+
+createUser({ name: '', email: '', isActive: true });
+
+export { };
