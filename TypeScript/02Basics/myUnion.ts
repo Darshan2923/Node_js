@@ -52,4 +52,6 @@ let seatAllotment: "aisle" | "middle" | "window";
 seatAllotment = "aisle";
 // seatAllotment='crew'; //strict
 
+export { }
+
 
